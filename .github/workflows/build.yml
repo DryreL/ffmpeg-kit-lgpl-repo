@@ -24,8 +24,7 @@ jobs:
       - name: Build iOS xcframeworks
         working-directory: ffmpeg-kit-next
         run: |
-          # Build only for arm64 and arm64-simulator
-          export ARCHS="arm64 arm64-simulator"
+          ./nix-ios.sh --list-profiles
           
           ./nix-ios.sh \
             --enable-lame \
