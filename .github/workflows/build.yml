@@ -32,9 +32,7 @@ jobs:
             --enable-dav1d \
             --enable-libwebp \
             --enable-kvazaar \
-            --enable-openh264 \
-            --enable-videotoolbox \
-            --enable-audiotoolbox
+            --enable-openh264
           
       - name: Package Release
         working-directory: ffmpeg-kit-next
