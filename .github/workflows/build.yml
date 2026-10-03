@@ -24,9 +24,7 @@ jobs:
       - name: Build iOS xcframeworks
         working-directory: ffmpeg-kit-next
         run: |
-          ./nix-ios.sh --list-profiles
-          
-          ./nix-ios.sh \
+          ./nix-ios.sh -p default -x \
             --enable-lame \
             --enable-opus \
             --enable-libvorbis \
