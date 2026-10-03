@@ -19,9 +19,10 @@ This build includes the following LGPL/BSD compatible external libraries:
 - `libwebp` (WebP)
 - `kvazaar` (HEVC/H.265 software fallback)
 - `openh264` (H.264 software fallback)
-- `zimg`, `soxr`
+- `videotoolbox` (Hardware Accelerated H.264 / HEVC)
+- `audiotoolbox` (Hardware Accelerated AAC / ALAC)
 
-It **DOES NOT** include `libx264` or `libx265`, meaning it is completely GPL-free.
+It **DOES NOT** include `libx264` or `libx265`, meaning it is completely GPL-free. Strict LGPL compliance is maintained (zimg and soxr have been removed).
 
 ## How to use
 
