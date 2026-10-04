@@ -19,8 +19,12 @@ This build includes the following LGPL/BSD compatible external libraries:
 - `libwebp` (WebP)
 - `kvazaar` (HEVC/H.265 software fallback)
 - `openh264` (H.264 software fallback)
-- `videotoolbox` (Hardware Accelerated H.264 / HEVC)
-- `audiotoolbox` (Hardware Accelerated AAC / ALAC)
+- `videotoolbox` (Hardware Accelerated H.264 / HEVC) via `--enable-ios-videotoolbox`
+- `audiotoolbox` (Hardware Accelerated AAC / ALAC) via `--enable-ios-audiotoolbox`
+
+Note: these are ffmpeg-kit options (`scripts/help-ios.sh`). FFmpeg's own `--enable-videotoolbox` is not accepted by
+`nix-ios.sh`; the build script passes it to FFmpeg's configure itself when `--enable-ios-videotoolbox` is set.
+Verify a build with the app's smoke test: its first line shows `videotoolbox=true`.
 
 It **DOES NOT** include `libx264` or `libx265`, meaning it is completely GPL-free. Strict LGPL compliance is maintained (zimg and soxr have been removed).
 
